@@ -4,6 +4,7 @@
     height: 315px;
     border-radius: 5px;
     transition: transform ease-in-out 0.05s;
+    position: relative;
 }
 
 .card-image{
@@ -14,6 +15,26 @@
 .card:hover{
     transform: scale(1.05);
     cursor:pointer;
+    .card-overlay{
+      display: block;
+    }
+}
+
+.card-overlay{
+  position: absolute;
+  width: 258px;
+  height: 315px;
+  z-index: 3;
+  background-color: rgba(0,0,0,0.6);
+  padding:0.5rem;
+  text-align: end;
+  display: none;
+  border-radius: 5px;
+}
+
+.card-overlay-text{
+  color:white;
+  font-size: 1.15rem;
 }
 
 .spinner {
@@ -85,4 +106,5 @@
       box-shadow: 0em -2.6em 0em 0em rgba(0,173,181, 0.2), 1.8em -1.8em 0 0em rgba(0,173,181, 0.2), 2.5em 0em 0 0em rgba(0,173,181, 0.2), 1.75em 1.75em 0 0em rgba(0,173,181, 0.2), 0em 2.5em 0 0em rgba(0,173,181, 0.2), -1.8em 1.8em 0 0em rgba(0,173,181, 0.5), -2.6em 0em 0 0em rgba(0,173,181, 0.7), -1.8em -1.8em 0 0em #00adb5;
     }
   }
-  
+
+

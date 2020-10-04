@@ -23,6 +23,9 @@ const Card = (props) => {
 
     return(
         <div className='card'>
+            <div className = 'card-overlay'>
+                <div className = 'card-overlay-text'>{props.name}</div>
+            </div>
             <img className = 'card-image' width = '258px' height = '315px' src = {props.src} alt = {props} ref = {imageRef} onLoad = {setLoad}></img>
             <div className="spinner" ref= {spinnerRef}>Loading...</div>
         </div>
