@@ -1,9 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import 'normalize.css/normalize.css';
+import './styles/styles.scss';
+import store from './store/store';
+import AppRouter from './AppRouter';
 
-const Sample = <h1>sample</h1>
+
 
 ReactDOM.render(
-  Sample,
+  <Provider store = {store}>
+    <AppRouter />
+  </Provider>,
   document.getElementById('root')
 );
