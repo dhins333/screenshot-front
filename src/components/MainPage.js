@@ -14,10 +14,21 @@ const MainPage = () => {
         dispatch(getGames());
     },[dispatch])
 
+    const renderCard = () => {
+        return(
+            <div className = 'card-container'>
+                {games.map((game,index) => {
+                    return(
+                        <Card src = {game.thumbnail} name = {game.name} key = {index} id = {game._id}/>
+                    )
+                })}
+            </div>
+        )
+    }
 
     return(
         <div className = 'main-page'>
-            {games.length === 0 ? <div className = 'loader'>Loading...</div> : <Card />}
+            {games.length === 0 ? <div className = 'loader'>Loading...</div> : renderCard()}
         </div>
     )
 }
