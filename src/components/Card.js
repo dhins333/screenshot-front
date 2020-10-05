@@ -1,4 +1,5 @@
 import React, { useEffect,useState } from 'react';
+import { withRouter } from 'react-router-dom';
 
 const Card = (props) => {
     
@@ -21,8 +22,12 @@ const Card = (props) => {
         setLoadState(true);
     }
 
+    const onCardClick = () => {
+        props.history.push(`/games/${props.id}`)
+    }
+
     return(
-        <div className='card'>
+        <div className='card' onClick = {onCardClick}>
             <div className = 'card-overlay'>
                 <div className = 'card-overlay-text'>{props.name}</div>
             </div>
@@ -32,4 +37,4 @@ const Card = (props) => {
     )
 }
 
-export default Card;
+export default withRouter(Card);
