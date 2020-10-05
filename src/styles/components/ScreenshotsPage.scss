@@ -6,3 +6,10 @@
     grid-gap:1rem;
     padding:1rem;
 }
+
+@media (max-width:650px){
+    .screenshots-container{
+        display: flex;
+        flex-direction: column;
+    }
+}
